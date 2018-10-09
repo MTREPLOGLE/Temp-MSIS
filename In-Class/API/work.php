@@ -1,40 +1,16 @@
 <?php
 
 
-$foo = " My name is Mike "
+require 'app/common.php';
 
-echo $foo;
+$taskID = $_GET('taskId') ?? 0 ;
 
-echo "string one"  , " 1", "\n";
-
-class Animal
-{
-  public $Type = 'Pig';
+if ($taskID < 1) {
+  throw new Exception('Invalid Task ID');
 }
 
-$wilder = new Animal();
+$workArr = Work::getWorkByTaskId($taskID);
 
-echo $wilder->type;
+$json = json_encode($workArr);
 
-$arr = [];
-
-$arr = [
-  'first' => 'Tom',
-  'last' => 'Gregory'
-
-
-];
-
-$arrToo = ['one', 'two', 'three'];
-
-print_r($arr);
-var_dump($arrToo);
-
-$n = 3
-if ($n == 5) {
-  echo 'n is big';
-} else {
-  echo 'n is small';
-}
-
-for ($1=0; $1<5; $1++)
+echo $json;
