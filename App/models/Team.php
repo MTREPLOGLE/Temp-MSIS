@@ -18,7 +18,7 @@ class Team
       // 1. Connect to the database
       $db = new PDO(DB_SERVER, DB_USER, DB_PW);
       // 2. Prepare the query
-      $sql = 'SELECT * FROM Work WHERE task_id = ?';
+      $sql = 'SELECT * FROM Teams';
       $statement = $db->prepare($sql);
       // 3. Run the query
       $success = $statement->execute();
