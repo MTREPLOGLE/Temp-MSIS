@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD']  == 'POST') {
 
 }
 
-$taskID = intval ($_GET['taskId'] ?? 0) ;
+$taskId = intval($_GET['taskId'] ?? 0) ;
 
 if ($taskID < 1) {
   throw new Exception('Invalid Task ID');
