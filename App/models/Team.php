@@ -21,9 +21,7 @@ class Team
       $sql = 'SELECT * FROM Work WHERE task_id = ?';
       $statement = $db->prepare($sql);
       // 3. Run the query
-      $success = $statement->execute(
-          
-      );
+      $success = $statement->execute();
       // 4. Handle the results
       $arr = [];
       while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
