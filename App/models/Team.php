@@ -6,7 +6,7 @@ class Team
   public $name;
   public $hourly_rate;
 
-  publci function  __construct($data) {
+  public function  __construct($data) {
     $this->id = intval($data['id']);
     $this->name = intval($data['id']);
     $this->hourly_rate = intval($data['hourly_rate']);
