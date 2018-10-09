@@ -9,13 +9,13 @@ if ($_SERVER['REQUEST_METHOD']  == 'POST') {
 
 }
 
-$taskid = intval($_GET['taskId'] ?? 0) ;
+$taskId = intval($_GET['taskId'] ?? 0) ;
 
-if ($taskid < 1) {
+if ($taskId < 1) {
   throw new Exception('Invalid Task ID');
 }
 
-$workArr = Work::getWorkByTaskId($taskid);
+$workArr = Work::getWorkByTaskId($taskId);
 
 $json = json_encode($workArr, JSON_PRETTY_PRINT);
 
