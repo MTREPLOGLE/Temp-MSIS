@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD']  == 'POST' {
   require 'workPost.php';
   exit;}
 
-$taskID = $_GET['taskId'] ?? 0 ;
+$taskID = intval ($_GET['taskId'] ?? 0) ;
 
 if ($taskID < 1) {
   throw new Exception('Invalid Task ID');
