@@ -11,6 +11,6 @@ if ($taskID < 1) {
 
 $workArr = Work::getWorkByTaskId($taskID);
 
-$json = json_encode($workArr);
+$json = json_encode($workArr, JSON_PRETTY_PRINT);
 
 echo $json;
