@@ -8,8 +8,8 @@ class Team
 
   public function  __construct($data) {
     $this->id = intval($data['id']);
-    $this->name = intval($data['id']);
-    $this->hourly_rate = intval($data['hourly_rate']);
+    $this->name = ($data['name']);
+    $this->hourly_rate = floatval($data['hourly_rate']);
   }
 
 
